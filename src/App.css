@@ -150,6 +150,7 @@ a {
     height: 280px;
     overflow: hidden;
     position: relative;
+
     img {
         width: 100%;
         height: 100%;
@@ -161,7 +162,7 @@ a {
 
 .featuredCard .slick-list {
     /* margin: 8px; */
-    width: 100%;    
+    width: 100%;
 }
 
 .featuredCard .text-container {
@@ -241,20 +242,31 @@ a {
     }
 }
 
-.featuredCard:hover{
+.featuredCard:hover {
     /* transform: scale(1.05); */
     transition: 0.5s;
-
+    background-color: #2F1AC4;
+    ;
     .hover-links-area {
         opacity: 1;
         visibility: visible;
         transition: .5s;
     }
-   
-    background: #2F1AC4;
-    ;
 
+    &.featuredCard .text-container p,h5{
+        color: #fff !important;
+        transition: 0.5s;
+    }
+
+    .slick-dots li:nth-child(3) button::before {
+        background-color: #fff;
+        top: 0px;
+    }
+    
+
+    
 }
+
 
 
 /* .featured-products .card .card-body {

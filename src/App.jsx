@@ -23,9 +23,9 @@ function App() {
       discount: "43.00",
       img: [
         {
-          default: "./assets/images/image 3.png",
-          color1: "./assets/images/image 1167.png",
-          color2: "./assets/images/image 1170.png"
+          default: "src/assets/img/image 1167.png",
+          color1: "src/assets/img/image 1168.png",
+          color2: "src/assets/img/image 1170.png"
         }
       ]
     },
@@ -35,9 +35,9 @@ function App() {
       price: "43.00",
       img: [
         {
-          default: "./assets/images/image 1167.png",
-          color1: "./assets/images/image 1172.png",
-          color2: "./assets/images/purepng 1.png"
+          default: "src/assets/img/image 1167.png",
+          color1: "src/assets/img/image 1172.png",
+          color2: "src/assets/img/purepng 1.png"
         }
       ]
     },
@@ -47,9 +47,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/image 1168.png",
-          color1: "./assets/images/purepng 1.png",
-          color2: "./assets/images/12599809_6 1.png"
+          default: "src/assets/img/image 1168.png",
+          color1: "src/assets/img/purepng 1.png",
+          color2: "src/assets/img/12599809_6 1.png"
         }
       ]
     },
@@ -59,9 +59,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/image 1169.png",
-          color1: "./assets/images/image 1170.png",
-          color2: "./assets/images/image 1172.png"
+          default: "src/assets/img/image 1169.png",
+          color1: "src/assets/img/image 1170.png",
+          color2: "src/assets/img/image 1172.png"
         }
       ]
     },
@@ -71,9 +71,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/image 1170.png",
-          color1: "./assets/images/image 1168.png",
-          color2: "./assets/images/image 1170.png"
+          default: "src/assets/img/image 1170.png",
+          color1: "src/assets/img/image 1168.png",
+          color2: "src/assets/img/image 1170.png"
         }
       ]
     },
@@ -83,9 +83,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/image 1167.png",
-          color1: "./assets/images/image 3.png",
-          color2: "./assets/images/image 1170.png"
+          default: "src/assets/img/image 1167.png",
+          color1: "src/assets/img/image 3.png",
+          color2: "src/assets/img/image 1170.png"
         }
       ]
     },
@@ -95,9 +95,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/image 1172.png",
-          color1: "./assets/images/unnamed 1.png",
-          color2: "./assets/images/image 1168.png"
+          default: "src/assets/img/image 1172.png",
+          color1: "src/assets/img/unnamed 1.png",
+          color2: "src/assets/img/image 1168.png"
         }
       ]
     },
@@ -107,9 +107,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/logitech-c920s 1.png",
-          color1: "./assets/images/image 1169.png",
-          color2: "./assets/images/image 1170.png"
+          default: "src/assets/img/logitech-c920s 1.png",
+          color1: "src/assets/img/image 1169.png",
+          color2: "src/assets/img/image 1170.png"
         }
       ]
     },
@@ -119,9 +119,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/purepng 1.png",
-          color1: "./assets/images/image 1169.png",
-          color2: "./assets/images/image 1169.png"
+          default: "src/assets/img/purepng 1.png",
+          color1: "src/assets/img/image 1169.png",
+          color2: "src/assets/img/image 1169.png"
         }
       ]
     },
@@ -131,9 +131,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/12599809_6 1.png",
-          color1: "./assets/images/image 1170.png",
-          color2: "./assets/images/image 1167.png"
+          default: "src/assets/img/12599809_6 1.png",
+          color1: "src/assets/img/image 1170.png",
+          color2: "src/assets/img/image 1167.png"
         }
       ]
     },
@@ -143,9 +143,9 @@ function App() {
       price: "42.00",
       img: [
         {
-          default: "./assets/images/unnamed 1.png",
-          color1: "./assets/images/image 1168.png",
-          color2: "./assets/images/purepng 1.png"
+          default: "src/assets/img/unnamed 1.png",
+          color1: "src/assets/img/image 1168.png",
+          color2: "src/assets/img/purepng 1.png"
         }
       ]
     },

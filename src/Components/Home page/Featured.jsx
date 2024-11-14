@@ -1,13 +1,12 @@
 import React from 'react'
 import { useState , useEffect } from 'react';
-import Slider from 'react-slick'; // Slick Slider'ı kullanabilmek için react-slick paketini yükleyin.
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import FeaturedCard from './Cards/FeaturedCard';
 
 function Featured( { products } ) {
     
-
   const settings = {
     dots: true,
     infinite: true,
@@ -48,17 +47,11 @@ function Featured( { products } ) {
       <div className="main-width mx-auto">
         <h3 className="text-center fw-700 title-color mb-5 fs-1">Featured Products</h3>
         <div className="featuredCards pb-5">
-          {/* Slider başlangıcı */}
           <Slider {...settings}>
-            <FeaturedCard/>
-            <FeaturedCard/>
-            <FeaturedCard/>
-            <FeaturedCard/>
-            <FeaturedCard/>
-            <FeaturedCard/>
-            <FeaturedCard/>
+            {products.map((product , index) => (
+              <FeaturedCard key={index} indexs={index} product={product} />
+            ))}
           </Slider>
-          {/* Slider sonu */}
         </div>
       </div>
     </section>
