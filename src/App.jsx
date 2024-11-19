@@ -12,6 +12,10 @@ import './App.css'
 import Header from './Components/Home page/Header'
 import Carousel from './Components/Home page/Carousel';
 import Featured from './Components/Home page/Featured';
+import Leatest from './Components/Home page/Leatest';
+import  Offers  from './Components/Home page/Offers';
+import TrendyFeatures from './Components/Home page/TrendyFeatures';
+import TrendingProducts from './Components/Home page/TrendingProducts';
 
 function App() {
   
@@ -32,7 +36,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "43.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1167.png",
@@ -44,7 +49,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1168.png",
@@ -56,7 +62,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1169.png",
@@ -68,7 +75,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1170.png",
@@ -80,7 +88,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1167.png",
@@ -92,7 +101,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/image 1172.png",
@@ -104,7 +114,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/logitech-c920s 1.png",
@@ -116,7 +127,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/purepng 1.png",
@@ -128,7 +140,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/12599809_6 1.png",
@@ -140,7 +153,8 @@ function App() {
     {
       name: "Cantilever chair",
       code: "Y523201",
-      price: "42.00",
+      price: "65.00",
+      discount: "43.00",
       img: [
         {
           default: "src/assets/img/unnamed 1.png",
@@ -159,6 +173,10 @@ function App() {
       <Navbar/>
       <Carousel/>
       <Featured products={products}/>
+      <Leatest product={products}/>
+      <Offers/>
+      <TrendyFeatures/>
+      <TrendingProducts products={products}/>
     </>
   )
 }

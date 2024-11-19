@@ -247,13 +247,15 @@ a {
     transition: 0.5s;
     background-color: #2F1AC4;
     ;
+
     .hover-links-area {
         opacity: 1;
         visibility: visible;
         transition: .5s;
     }
 
-    &.featuredCard .text-container p,h5{
+    &.featuredCard .text-container p,
+    h5 {
         color: #fff !important;
         transition: 0.5s;
     }
@@ -262,55 +264,17 @@ a {
         background-color: #fff;
         top: 0px;
     }
-    
-
-    
 }
-
-
-
-/* .featured-products .card .card-body {
-    position: relative;
-}
-
-
-.card .hover-links-area 
-
-.featuredCards .card:hover .card-body,
-.featuredCards .card:hover .cardHover,
-.featuredCards .card:hover .color-option {
-    background-color: #2F1AC4 !important;
-    transition: .5s;
-    color: #fff !important;
-    z-index: 10;
-
-    h5 {
-        color: #fff;
-        transition: .5s;
-    }
-
-    .products-color .slick-dots li:nth-child(3) button::before {
-        background-color: #fff;
-    }
-
-    .hover-links-area {
-        opacity: 1;
-        visibility: visible;
-        transition: .5s;
-    }
-
-    .featured-details {
-        visibility: visible;
-    }
-} */
 
 /* Featured cards hover end */
+
+
 
 /* Leatest Products start */
 
 /* Filter bar */
 
-/* .leatest-products .filter-bar ul {
+.leatest-products .filter-bar ul {
     list-style-type: none;
 
     li {
@@ -323,44 +287,52 @@ a {
         transition: .3s;
         text-decoration: underline;
     }
-} */
+}
 
 /* Filter bar end*/
 
 /* Leatest card start*/
 
-/* .leatest-products h5,
+.leatest-products h5,
 p {
     color: #151875;
-} */
+}
 
-/* .leatest-products .main-width>h3 {
+.leatest-products .main-width>h3 {
     font-family: "Josefin Sans";
     font-size: 36px;
     font-style: normal !important;
     font-weight: 700;
     line-height: normal;
-} */
+}
 
-/* .leatest-card {
+.leatest-card {
     width: 100% !important;
     height: 229px !important;
-} */
+}
 
-/* .leatest-container {
-    width: 100%;
+.leatest-container {
+    width: 90%;
     height: 269.959px !important;
-} */
 
-/* .split-card-to-three {
+    img {
+        width: 100%;
+        height: 100%;
+        padding: 50px;
+        object-fit: contain;
+        background: #F6F7FB;
+    }
+}
+
+.split-card-to-three {
     width: calc((100% - 2 * 30px) / 3) !important;
-} */
+}
 
 /* Leatest card end*/
 
 /* Offers start */
 
-/* .main-width>h3 {
+.main-width>h3 {
     font-family: "Josefin Sans";
     font-size: 36px;
     font-style: normal !important;
@@ -389,6 +361,7 @@ p {
         flex-shrink: 0;
         text-align: center;
         padding: 20px;
+
         h6 {
             padding-bottom: 15px;
         }
@@ -404,6 +377,165 @@ p {
             line-height: 21px;
         }
     }
-} */
+}
 
 /* Offers end */
+
+/* trendy-features start */
+
+.trendy-features {
+    background: #F1F0FF;
+}
+
+.trendftrimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trendftrtxt {
+    text-align: start;
+    color: #151875;
+
+}
+
+.trendy-features {
+    h3 {
+        color: #151875;
+        font-family: Josefin Sans;
+        font-size: 35px;
+    }
+}
+
+
+
+.trendftrbody {
+    ul {
+        padding-left: 18px;
+
+        li {
+            color: #ACABC3;
+            padding: 5px 0px;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0.015em;
+
+            &:first-child {
+                &::marker {
+                    color: #F52B70;
+                    font-size: 20px;
+                }
+            }
+
+            &:nth-child(2) {
+                &::marker {
+                    color: #2B2BF5;
+                    font-size: 18px;
+                }
+            }
+
+            &:nth-child(3) {
+                &::marker {
+                    color: #2BF5CC;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+}
+
+.trendftrbtns {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* trendy-features end */
+
+/* Treding Products start*/
+
+.trending-product-section>h3 {
+    color: #151875;
+    font-family: Josefin Sans;
+    font-size: 35px;
+}
+
+.trending-cards {
+    width: 100%;
+    gap: 15px;
+
+    .trending-card {
+        box-shadow: 0px 8px 40px 0px rgba(49, 32, 138, 0.05);
+        width: calc((100% - (3 * 15px)) / 4);
+        background-color: #FFFFFF;
+        padding: 8px;
+
+        img {
+            width: 100%;
+            /* margin: 8px; */
+            object-fit: cover;
+            background-color: #F5F6F8;
+            ;
+        }
+
+        h5 {
+            color: rgba(21, 24, 117, 1);
+            font-size: 16px;
+        }
+
+        p {
+
+            font-size: 14px;
+
+            span {
+                color: rgba(21, 24, 117, 0.5);
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+.trending-card-discount {
+    flex: 9;
+    flex-basis: 40px;
+    gap: 15px;
+    :first-child{
+        background-color: rgba(255, 246, 251, 1);
+    }
+
+    :nth-child(2){
+        background-color: rgba(238, 239, 251, 1);
+    }
+}
+
+.executive {
+    flex: 3;
+}
+
+.discountCard {
+    flex-grow: 1;
+    height: 270px;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0px 8px 40px 0px rgba(49, 32, 138, 0.05);
+
+
+    p , a{
+        background-color: transparent !important;
+    }
+    img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+
+
+
+/* Treding Products end*/
