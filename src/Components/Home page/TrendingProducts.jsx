@@ -6,6 +6,7 @@ import Chairimg from '../../assets/img/Discount/image 1161.png'
 import Executiveimg1 from '../../assets/img/Discount/Executive/Trnding products list-1.png'
 import Executiveimg2 from '../../assets/img/Discount/Executive/Trnding products list-2.png'
 import Executiveimg3 from '../../assets/img/Discount/Executive/Trnding products list.png'
+import ExecutiveCard from './Cards/ExecutiveCard'
 
 
 const TrendingProducts = ({ products }) => {
@@ -21,8 +22,10 @@ const TrendingProducts = ({ products }) => {
                     <TrendingcardDiscount img = {Clockimg}/>
                     <TrendingcardDiscount img = {Chairimg}/>
                 </div>
-                <div className="executive">
-                    {/* 3 Div komponent */}
+                <div className="executive d-flex flex-column justify-content-between">
+                    <ExecutiveCard img = {Executiveimg1}/>
+                    <ExecutiveCard img = {Executiveimg2}/>
+                    <ExecutiveCard img = {Executiveimg3}/>
                 </div>
             </div>
         </section>
