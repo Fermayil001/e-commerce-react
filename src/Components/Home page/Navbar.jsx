@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Dropdown } from 'react-bootstrap'; 
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);
@@ -11,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-     <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
+     <nav className="navbar navbar-expand-lg bg-body-light p-3">
       <div className="container d-flex justify-content-around main-width" style={{ gap: '38px' }}>
         <div className="nav-title">
           <a style={{ fontSize: '28px' }} className="navbar-brand fw-700" href="#">
@@ -46,19 +47,19 @@ function Navbar() {
           </li>
 
           <li className="nav-item fs-14">
-            <a className="nav-link nav-hover-color" href="#">Pages</a>
+            <Link className="nav-link nav-hover-color" to="#">Pages</Link>
           </li>
           <li className="nav-item fs-14">
-            <a className="nav-link nav-hover-color" href="#">Products</a>
+            <Link className="nav-link nav-hover-color" to="/products">Products</Link>
           </li>
           <li className="nav-item fs-14">
-            <a className="nav-link nav-hover-color" href="#">Blog</a>
+            <Link className="nav-link nav-hover-color" to="#">Blog</Link>
           </li>
           <li className="nav-item fs-14">
-            <a className="nav-link nav-hover-color" href="#">Shop</a>
+            <Link className="nav-link nav-hover-color" to="#">Shop</Link>
           </li>
           <li className="nav-item fs-14">
-            <a className="nav-link nav-hover-color" href="#">Contact</a>
+            <Link className="nav-link nav-hover-color" to="#">Contact</Link>
           </li>
         </ul>
 

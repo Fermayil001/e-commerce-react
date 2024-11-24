@@ -1,8 +1,6 @@
 import React from 'react'
-/* import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; */
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -64,10 +62,10 @@ function Header() {
                                     </div>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="header-link nav-link" href="#">
+                                    <Link className="header-link nav-link" to="/login">
                                         Login
                                         <i className="bi bi-person px-1"></i>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
                                     <a className="header-link nav-link" href="#">
