@@ -1,8 +1,8 @@
 import React from 'react'
 import RowLinks from './General-components/RowLinks'
-import CredentialsSignInPage from './Login Page/Login'
 import Row from './Home page/Row'
 import Footer from './Home page/Footer'
+import SlotsSignIn from './Login Page/Login'
 
 const LoginPg = () => {
 
@@ -13,7 +13,7 @@ const LoginPg = () => {
     return (
         <>
             <RowLinks data={rowData} />
-            <CredentialsSignInPage/>
+            <SlotsSignIn/>
             <Row/>
             <Footer/>
         </>

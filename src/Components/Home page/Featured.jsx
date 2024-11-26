@@ -1,7 +1,7 @@
 import React from 'react'
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import FeaturedCard from './Cards/FeaturedCard';
 
@@ -49,7 +49,7 @@ function Featured( { products } ) {
         <div className="featuredCards pb-5">
           <Slider {...settings}>
             {products.map((product , index) => (
-              <FeaturedCard key={index} indexs={index} product={product} />
+              <FeaturedCard className = "featuredCard my-4" key={index} indexs={index} product={product} />
             ))}
           </Slider>
         </div>

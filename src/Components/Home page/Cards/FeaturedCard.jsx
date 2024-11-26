@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-const FeaturedCard = ({ product }) => {
+const FeaturedCard = ({ product  , className }) => {
 
     const settings = {
         dots: true,
@@ -17,7 +17,7 @@ const FeaturedCard = ({ product }) => {
 
     return (
         <>
-            <div className="featuredCard  my-4">
+            <div className= {className}>
                 <div className="hover-links-area">
                     <div className="hover-link"><a href="#"><i className="bi bi-cart2"></i></a></div>
                     <div className="hover-link fs-14"><i className="bi bi-heart"></i></div>

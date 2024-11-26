@@ -56,7 +56,7 @@ function Navbar() {
             <Link className="nav-link nav-hover-color" to="#">Blog</Link>
           </li>
           <li className="nav-item fs-14">
-            <Link className="nav-link nav-hover-color" to="#">Shop</Link>
+            <Link className="nav-link nav-hover-color" to="/shop">Shop</Link>
           </li>
           <li className="nav-item fs-14">
             <Link className="nav-link nav-hover-color" to="#">Contact</Link>
