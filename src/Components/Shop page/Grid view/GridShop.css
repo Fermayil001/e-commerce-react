@@ -1,11 +1,19 @@
-/* .grid-products{
-    width: calc(100% / 4);
-}
- */
-
- .grid-products{
+.grid-products {
     width: calc((100% - 80px) / 4) !important;
- }
+
+    &.featuredCard .text-container p,
+    h5 {
+        color: #151875 !important;
+    }
+
+    .text-container{
+        .card-code{
+            display: none;
+        }
+    }
+
+
+}
 
 .grid-products .slick-dots li button::before {
     width: 10px;
@@ -31,4 +39,54 @@
     bottom: 9rem;
     padding-left: 8px;
     color: #151875 !important;
+}
+
+.featuredCard .hover-links-area {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: center;
+    padding-left: 15px;
+    padding-top: 10px;
+    z-index: 55555;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    background: linear-gradient(to right, #1389FF, #1DB4E7);
+    background-clip: text;
+    color: transparent;
+
+    .hover-link:first-child {
+        background-color: #EEEFFB;
+        border-radius: 50%;
+        padding: 8px;
+
+    }
+}
+
+.grid-products:hover {
+    background-color: #fff !important;
+    /* Hover fonunu sıfırlayır */
+    opacity: 1;
+    /* Şəffaflıq sıfırlanır */
+    transform: none;
+    /* Ölçü dəyişməz */
+    visibility: visible;
+
+    .hover-links-area {
+        opacity: 1;
+        visibility: visible;
+        transition: .5s;
+    }
+
+    &.featuredCard .text-container p,
+    h5 {
+        color: #151875 !important;
+    }
+
+    .slick-dots li:nth-child(3) button::before {
+        background-color: #fff;
+        top: 0px;
+    }
 }

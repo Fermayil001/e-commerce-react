@@ -3,6 +3,8 @@ import FeaturedCard from '../../Home page/Cards/FeaturedCard'
 import './GridShop.css'
 
 const GridShop = ({ products }) => {
+
+
     return (
         <div className="grid-products-container  main-width mx-auto">
             <div className='grid-product d-flex flex-wrap'>

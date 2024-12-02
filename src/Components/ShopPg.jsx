@@ -4,6 +4,7 @@ import RowLinks from './General-components/RowLinks'
 import FilterRow from './Shop page/FilterRow'
 import { useState } from 'react'
 import ListShop from './Shop page/List view/ListShop'
+import Footer from './Home page/Footer'
 
 const ShopPg = ({ products }) => {
 
@@ -20,9 +21,8 @@ const ShopPg = ({ products }) => {
         <>
             <RowLinks data={rowData} />
             <FilterRow handleChangeView={handleChangeView} />
-            {/* <GridShop products={products} isGrid = {displayView}/> */}
             {isGrid ? <GridShop products={products} isGrid = {isGrid}/> : <ListShop products={products} isGrid = {isGrid}/>}
-
+            <Footer/>
         </>
     )
 }

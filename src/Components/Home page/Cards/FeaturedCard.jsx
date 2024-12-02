@@ -1,5 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
+import './FeaturedCard.css'
+import { useState } from 'react'
 
 const FeaturedCard = ({ product  , className }) => {
 
@@ -14,10 +16,18 @@ const FeaturedCard = ({ product  , className }) => {
         arrows: false
     }
 
+   /*  ff = document.querySelector('.featuredCard')
+
+    const [isGrid, setIsgrid] = useState(false)
+
+    setIsgrid(className.includes('grid-products'))
+
+    isGrid ? ff?.style = 'featuredCard:hover = ""' : null */
+
 
     return (
         <>
-            <div className= {className}>
+            <div className= {className}> {/* featuredCard grid-products my-4 */}
                 <div className="hover-links-area">
                     <div className="hover-link"><a href="#"><i className="bi bi-cart2"></i></a></div>
                     <div className="hover-link fs-14"><i className="bi bi-heart"></i></div>

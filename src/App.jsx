@@ -13,6 +13,7 @@ import Navbar from "./Components/Home page/Navbar";
 import Header from "./Components/Home page/Header";
 import Login from "./Components/LoginPg";
 import ShopPg from "./Components/ShopPg";
+import NotFound from "./Components/404 page/NotFound";
 
 function App() {
   const products = [
@@ -175,6 +176,7 @@ let data = [];
         <Route path="/products" element={<ProductsPg />} />
         <Route path="/shop" element={<ShopPg products = {products} />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<NotFound/>} />
       </Routes>
     </Router>
   )
