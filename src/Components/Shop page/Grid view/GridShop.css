@@ -67,11 +67,8 @@
 
 .grid-products:hover {
     background-color: #fff !important;
-    /* Hover fonunu sıfırlayır */
     opacity: 1;
-    /* Şəffaflıq sıfırlanır */
     transform: none;
-    /* Ölçü dəyişməz */
     visibility: visible;
 
     .hover-links-area {

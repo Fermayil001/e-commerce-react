@@ -1,6 +1,5 @@
 import React from 'react'
 import FormControl from '@mui/joy/FormControl';
-import FormLabel from '@mui/joy/FormLabel';
 import FormHelperText from '@mui/joy/FormHelperText';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
@@ -16,7 +15,6 @@ const Footer = () => {
         event.preventDefault();
         setData((current) => ({ ...current, status: 'loading' }));
         try {
-            // Replace timeout with real backend operation
             setTimeout(() => {
                 setData({ email: '', status: 'sent' });
             }, 1500);

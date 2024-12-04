@@ -18,7 +18,6 @@ const NotFound = () => {
         <img src={NotFoundPic} alt='Not Found' />
         <button onClick={handleClick} style={{ borderRadius: "2px" }} className="btn btn-dark border-none button-hover-color body-main-bg-color">Back To Home</button>
       </div>
-
       <Footer />
     </div>
   )

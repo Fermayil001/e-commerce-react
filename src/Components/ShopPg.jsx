@@ -14,7 +14,6 @@ const ShopPg = ({ products }) => {
 
     const handleChangeView = (e) => {
         e.target.id === "isGrid" ? setIsGrid(true) : setIsGrid(false)
-        //   setDisplayView(!displayView);
     }
 
     return (

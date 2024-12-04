@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 
 const Leatest = ({ product }) => {
-  // Filtreleme işlemi için seçilen filtreyi tutuyoruz
   const [selectedFilter, setSelectedFilter] = useState('newArrival');
 
-  // Filtreye tıklanıldığında aktif filtreyi ayarlamak
   const handleFilterClick = (filterType) => {
     setSelectedFilter(filterType);
   };
 
-  // Filtreye göre ürün detaylarını almak için fonksiyon
   const getProductDetails = (filterType) => {
     return product.map((product) => {
       let updatedProduct = { ...product };

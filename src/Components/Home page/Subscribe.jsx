@@ -1,5 +1,4 @@
 import React from 'react'
-import BgPhoto from '../../assets/img/Background/Bg-photo.jpeg'
 
 const Subscribe = () => {
     return (

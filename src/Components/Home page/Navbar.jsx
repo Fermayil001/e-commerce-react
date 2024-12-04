@@ -8,8 +8,6 @@ function Navbar() {
 
     const toggleNavbar = () => setIsNavbarCollapsed(!isNavbarCollapsed);
 
-
-
   return (
     <>
      <nav className="navbar navbar-expand-lg bg-body-light p-3">

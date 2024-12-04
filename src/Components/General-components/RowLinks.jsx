@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const RowLinks = ({ data }) => {
     return (
         <section className='row-links-section'>
-            <div className='main-width mx-auto row-links-container'> {/* Padding 21px */}
+            <div className='main-width mx-auto row-links-container'> 
                 <h3>{data}</h3>
                 <ul>
                     <li>

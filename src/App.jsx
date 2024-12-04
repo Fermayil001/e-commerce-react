@@ -14,6 +14,8 @@ import Header from "./Components/Home page/Header";
 import Login from "./Components/LoginPg";
 import ShopPg from "./Components/ShopPg";
 import NotFound from "./Components/404 page/NotFound";
+import Admin from "./Components/Admin";
+import SignUp from "./Components/Sign Up/SignUp";
 
 function App() {
   const products = [
@@ -177,6 +179,8 @@ let data = [];
         <Route path="/shop" element={<ShopPg products = {products} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/*" element={<NotFound/>} />
+        <Route path="/signUp" element={<SignUp/>} />
+        <Route path="/admin" element={<Admin/>} />
       </Routes>
     </Router>
   )

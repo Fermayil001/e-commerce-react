@@ -13,7 +13,7 @@ const FilterRow = ({ handleChangeView }) => {
     <div className='filter-row d-flex justify-content-between main-width mx-auto my-5'>
       <div className="filter-row-title">
         <h3>Ecommerce Acceories & Fashion item </h3>
-        <span>About 9,620 results (0.62 seconds)</span>  {/* Must be dynamic */}
+        <span>About 9,620 results (0.62 seconds)</span>  {/* Must be dynamiccc*/}
       </div>
       <ul className='d-flex'>
         <li>

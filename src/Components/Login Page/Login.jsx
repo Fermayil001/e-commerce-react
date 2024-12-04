@@ -1,3 +1,4 @@
+import axios from 'axios';
 import * as React from 'react';
 import {
   Button,
@@ -103,7 +104,7 @@ function CustomButton() {
 
 function SignUpLink() {
   return (
-    <Link href="/" variant="body2">
+    <Link href="/signUp" variant="body2">
       Sign up
     </Link>
   );
@@ -123,21 +124,38 @@ function Title() {
 
 function Subtitle() {
   return (
-    < >
+    <>
     </>
   );
 }
 
 export default function SlotsSignIn() {
   const theme = useTheme();
+
+  const handleSignIn = async (provider, formData) => {
+    const email = formData.get('email');
+    const password = formData.get('password');
+
+    try {
+      const response = await axios.post('https://localhost:7269/api/Auth/Login', {
+        email,
+        password,
+      });
+
+      const token = response.data; 
+      localStorage.setItem('token', token); 
+      
+      alert('Login successful!');
+      window.location.href = '/admin'; 
+    } catch (err) {
+      alert('Login failed! Please check your credentials.');
+    }
+  };
+
   return (
     <AppProvider theme={theme}>
       <SignInPage
-        signIn={(provider, formData) =>
-          alert(
-            `Logging in with "${provider.name}" and credentials: ${formData.get('email')}, ${formData.get('password')}`,
-          )
-        }
+        signIn={handleSignIn}
         slots={{
           title: Title,
           subtitle: Subtitle,
