@@ -1,9 +1,33 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+/* import Dashboard from './Admin Panel/Dashboard';
+import ProductManagement from './Admin Panel/ProductManagement';
+import OrderManagement from './Admin Panel/OrderManagement';
+import AdminLayout from './Admin Panel/AdminLayout'; */
 const Admin = () => {
-  const [productData, setProductData] = useState([]);
-/* Yoxlama */
+
+
+    return (
+        <>
+        <h3>Admin</h3>
+        </>
+
+
+    );
+}
+
+export default Admin
+
+
+
+{/* <Route path='dashboard' element= {<Dashboard/>}/>
+                <Route path='productsmanagement' element={<ProductManagement/>}/> 
+                <Route path='ordermanagement' element={<OrderManagement/>}/> */}
+
+
+
+/* 
+    const [productData, setProductData] = useState([]);
   useEffect(() => {
     axios
       .post("https://localhost:7269/api/UIProduct/AllProductUI")
@@ -21,9 +45,11 @@ const Admin = () => {
         console.error("Error fetching data: ", error);
       });
   }, []);
+*/
 
-  return (
-    <div>
+
+
+/* <div>
       <h1>Product Images</h1>
       <div>
         {productData.length === 0 ? (
@@ -36,10 +62,4 @@ const Admin = () => {
           ))
         )}
       </div>
-    </div>
-  );
-
-
-}
-
-export default Admin
+    </div> */

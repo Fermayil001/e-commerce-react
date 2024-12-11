@@ -16,6 +16,10 @@ import ShopPg from "./Components/ShopPg";
 import NotFound from "./Components/404 page/NotFound";
 import Admin from "./Components/Admin";
 import SignUp from "./Components/Sign Up/SignUp";
+import AdminLayout from "./Components/Admin Panel/AdminLayout";
+import Dashboard from "./Components/Admin Panel/Dashboard";
+import ProductManagement from "./Components/Admin Panel/ProductManagement";
+import OrderManagement from "./Components/Admin Panel/OrderManagement";
 
 function App() {
   const products = [
@@ -171,8 +175,8 @@ let data = [];
 
   return (
     <Router>
-      <Header/>
-      <Navbar/>
+      {/* <Header/>
+      <Navbar/> */}
       <Routes>
         <Route path="/" element={<Home products = {products} data = {data}/>} />
         <Route path="/products" element={<ProductsPg />} />
@@ -180,7 +184,11 @@ let data = [];
         <Route path="/login" element={<Login />} />
         <Route path="/*" element={<NotFound/>} />
         <Route path="/signUp" element={<SignUp/>} />
-        <Route path="/admin" element={<Admin/>} />
+            <Route path="/admin/*" element={<AdminLayout />}>
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="productsmanagement" element={<ProductManagement />} />
+                <Route path="ordermanagement" element={<OrderManagement />} />
+            </Route>
       </Routes>
     </Router>
   )
