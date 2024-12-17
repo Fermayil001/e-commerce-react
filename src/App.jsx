@@ -1,4 +1,5 @@
 import React from "react";
+import { useState , useEffect} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'
 import Home from "./Components/Home";
-import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProductsPg from "./Components/ProductsPg";
 import Navbar from "./Components/Home page/Navbar";
 import Header from "./Components/Home page/Header";
@@ -22,176 +23,186 @@ import ProductManagement from "./Components/Admin Panel/ProductManagement";
 import OrderManagement from "./Components/Admin Panel/OrderManagement";
 
 function App() {
-  const products = [
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1167.png",
-                color1: "src/assets/img/image 1168.png",
-                color2: "src/assets/img/image 1170.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1167.png",
-                color1: "src/assets/img/image 1172.png",
-                color2: "src/assets/img/purepng 1.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1168.png",
-                color1: "src/assets/img/purepng 1.png",
-                color2: "src/assets/img/12599809_6 1.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1169.png",
-                color1: "src/assets/img/image 1170.png",
-                color2: "src/assets/img/image 1172.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1170.png",
-                color1: "src/assets/img/image 1168.png",
-                color2: "src/assets/img/image 1170.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1167.png",
-                color1: "src/assets/img/image 3.png",
-                color2: "src/assets/img/image 1170.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/image 1172.png",
-                color1: "src/assets/img/unnamed 1.png",
-                color2: "src/assets/img/image 1168.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/logitech-c920s 1.png",
-                color1: "src/assets/img/image 1169.png",
-                color2: "src/assets/img/image 1170.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/purepng 1.png",
-                color1: "src/assets/img/image 1169.png",
-                color2: "src/assets/img/image 1169.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/12599809_6 1.png",
-                color1: "src/assets/img/image 1170.png",
-                color2: "src/assets/img/image 1167.png"
-            }
-        ]
-    },
-    {
-        name: "Cantilever chair",
-        code: "Y523201",
-        price: "65.00",
-        discount: "43.00",
-        img: [
-            {
-                default: "src/assets/img/unnamed 1.png",
-                color1: "src/assets/img/image 1168.png",
-                color2: "src/assets/img/purepng 1.png"
-            }
-        ]
-    },
-]
+    const products = [
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1167.png",
+                    color1: "src/assets/img/image 1168.png",
+                    color2: "src/assets/img/image 1170.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1167.png",
+                    color1: "src/assets/img/image 1172.png",
+                    color2: "src/assets/img/purepng 1.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1168.png",
+                    color1: "src/assets/img/purepng 1.png",
+                    color2: "src/assets/img/12599809_6 1.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1169.png",
+                    color1: "src/assets/img/image 1170.png",
+                    color2: "src/assets/img/image 1172.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1170.png",
+                    color1: "src/assets/img/image 1168.png",
+                    color2: "src/assets/img/image 1170.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1167.png",
+                    color1: "src/assets/img/image 3.png",
+                    color2: "src/assets/img/image 1170.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/image 1172.png",
+                    color1: "src/assets/img/unnamed 1.png",
+                    color2: "src/assets/img/image 1168.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/logitech-c920s 1.png",
+                    color1: "src/assets/img/image 1169.png",
+                    color2: "src/assets/img/image 1170.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/purepng 1.png",
+                    color1: "src/assets/img/image 1169.png",
+                    color2: "src/assets/img/image 1169.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/12599809_6 1.png",
+                    color1: "src/assets/img/image 1170.png",
+                    color2: "src/assets/img/image 1167.png"
+                }
+            ]
+        },
+        {
+            name: "Cantilever chair",
+            code: "Y523201",
+            price: "65.00",
+            discount: "43.00",
+            img: [
+                {
+                    default: "src/assets/img/unnamed 1.png",
+                    color1: "src/assets/img/image 1168.png",
+                    color2: "src/assets/img/purepng 1.png"
+                }
+            ]
+        },
+    ]
 
-let data = [];
+    let data = [];
     products.map((product, index) => (
         data.push(product)
     ))
 
-  return (
-    <Router>
-      {/* <Header/>
-      <Navbar/> */}
-      <Routes>
-        <Route path="/" element={<Home products = {products} data = {data}/>} />
-        <Route path="/products" element={<ProductsPg />} />
-        <Route path="/shop" element={<ShopPg products = {products} />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/*" element={<NotFound/>} />
-        <Route path="/signUp" element={<SignUp/>} />
-            <Route path="/admin/*" element={<AdminLayout />}>
-                <Route path="dashboard" element={<Dashboard />} />
-                <Route path="productsmanagement" element={<ProductManagement />} />
-                <Route path="ordermanagement" element={<OrderManagement />} />
-            </Route>
-      </Routes>
-    </Router>
-  )
+    const [isAdminMode, setIsAdminMode] = useState(false)
+
+
+    useEffect(() => {
+        window.location.pathname.startsWith("/admin")
+            ? setIsAdminMode(!isAdminMode)
+            : null;
+    }, [])
+
+
+    return (
+        <Router>
+            {isAdminMode ? null : <Header /> }
+            {isAdminMode ? null : <Navbar /> }
+            <Routes>
+                <Route path="/" element={<Home products={products} data={data} />} />
+                <Route path="/products" element={<ProductsPg />} />
+                <Route path="/shop" element={<ShopPg products={products} />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/*" element={<NotFound />} />
+                <Route path="/signUp" element={<SignUp />} />
+                <Route path="/admin/*" element={<AdminLayout />}>
+                    <Route index path="dashboard" element={<Dashboard />} />
+                    <Route path="productsmanagement" element={<ProductManagement/>} />
+                    <Route path="ordermanagement" element={<OrderManagement />} />
+                </Route>
+            </Routes>
+        </Router>
+    )
 }
 
 export default App
