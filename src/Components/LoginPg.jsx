@@ -4,18 +4,17 @@ import Row from './Home page/Row'
 import Footer from './Home page/Footer'
 import SlotsSignIn from './Login Page/Login'
 
-const LoginPg = () => {
 
+const LoginPg = ({setIsSuccessLogin}) => {
     const rowData = 'My Account'
-
 
 
     return (
         <>
             <RowLinks data={rowData} />
-            <SlotsSignIn/>
-            <Row/>
-            <Footer/>
+            <SlotsSignIn  setIsSuccessLogin = {setIsSuccessLogin}/>
+            <Row />
+            <Footer />
         </>
     )
 }

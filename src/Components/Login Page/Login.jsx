@@ -17,6 +17,8 @@ import { AppProvider } from '@toolpad/core/AppProvider';
 import { SignInPage } from '@toolpad/core/SignInPage';
 import { useTheme } from '@mui/material/styles';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 const providers = [{ id: 'credentials', name: 'Email and Password' }];
 
@@ -129,12 +131,14 @@ function Subtitle() {
   );
 }
 
-export default function SlotsSignIn() {
+export default function SlotsSignIn( { setIsSuccessLogin } ) {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const handleSignIn = async (provider, formData) => {
     const email = formData.get('email');
     const password = formData.get('password');
+
 
     try {
       const response = await axios.post('https://localhost:7269/api/Auth/Login', {
@@ -142,11 +146,12 @@ export default function SlotsSignIn() {
         password,
       });
 
-      const token = response.data; 
-      localStorage.setItem('token', token); 
+      setIsSuccessLogin(response.status === 200)
       
-      alert('Login successful!');
-      window.location.href = '/admin'; 
+      const token = response.data; 
+      localStorage.setItem('token', token);
+      const decodedToken = jwtDecode(token);
+      decodedToken.role == 'Admin' ? navigate('/admin') : navigate('/');
     } catch (err) {
       alert('Login failed! Please check your credentials.');
     }

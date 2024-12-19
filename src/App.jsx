@@ -21,6 +21,7 @@ import AdminLayout from "./Components/Admin Panel/AdminLayout";
 import Dashboard from "./Components/Admin Panel/Dashboard";
 import ProductManagement from "./Components/Admin Panel/ProductManagement";
 import OrderManagement from "./Components/Admin Panel/OrderManagement";
+import Logout from "./Components/Logout pg/Logout";
 
 function App() {
     const products = [
@@ -179,20 +180,22 @@ function App() {
 
     useEffect(() => {
         window.location.pathname.startsWith("/admin")
-            ? setIsAdminMode(!isAdminMode)
-            : null;
-    }, [])
+            ? setIsAdminMode(true)
+            : setIsAdminMode(false);
+    }, [window.location.pathname])
+
+    const [isSuccessLogin, setIsSuccessLogin] = useState(false)
 
 
     return (
         <Router>
-            {isAdminMode ? null : <Header /> }
-            {isAdminMode ? null : <Navbar /> }
+            {!isAdminMode && <Header />}
+            {!isAdminMode && <Navbar />}
             <Routes>
                 <Route path="/" element={<Home products={products} data={data} />} />
                 <Route path="/products" element={<ProductsPg />} />
                 <Route path="/shop" element={<ShopPg products={products} />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={isSuccessLogin ? <Logout/> : <Login setIsSuccessLogin ={setIsSuccessLogin}/>} />
                 <Route path="/*" element={<NotFound />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/admin/*" element={<AdminLayout />}>

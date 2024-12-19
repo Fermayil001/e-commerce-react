@@ -1,0 +1,16 @@
+.sign-up{
+    label{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 5px;
+        gap: 10px;
+    }
+    input{
+        padding: 8px 15px;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+    }
+   
+}
