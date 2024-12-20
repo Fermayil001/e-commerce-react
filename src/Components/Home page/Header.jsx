@@ -1,7 +1,15 @@
+import { jwtDecode } from 'jwt-decode'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Header() {
+
+    let user;
+    const userToken = localStorage.getItem('token')
+    userToken ?  user = jwtDecode(userToken) : null;
+    
+    
+
     return (
         <>
             <header className="header bg-color-header text-light" style={{ fontSize: '12px' }}>
@@ -57,7 +65,7 @@ function Header() {
                                 </li>
                                 <li className="nav-item">
                                     <Link className="header-link nav-link" to="/login">
-                                        Login
+                                        {userToken ? user.unique_name : `Login`}
                                         <i className="bi bi-person px-1"></i>
                                     </Link>
                                 </li>

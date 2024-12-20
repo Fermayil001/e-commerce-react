@@ -25,6 +25,9 @@ const SignUp = () => {
             } else if (response.status === 400) {
                 setIsSuccess(false);
                 setIsRegistered(true); // Kullanıcı zaten kayıtlı
+            }else{
+                setIsSuccess(false);
+                setIsRegistered(false); // Kullanıcı zaten kayıtlı
             }
         } catch (error) {
             console.error(error);

@@ -2,8 +2,14 @@ import React from 'react'
 import { Drawer, List, ListItem, ListItemText, AppBar, Toolbar, Typography } from '@mui/material';
 import { Link, Outlet } from 'react-router-dom';
 import "../Admin Panel/AdminPanel.css"
+import Logout from '../Logout pg/Logout';
+
 
 const AdminLayout = () => {
+
+
+
+
     return (
         <div >
             {<div style={{ flexGrow: 1, textAlign: 'center' }}>
@@ -28,11 +34,17 @@ const AdminLayout = () => {
                         <ListItem button='true' component={Link} to="/admin/ordermanagement">
                             <ListItemText primary="Orders" />
                         </ListItem>
+                        <ListItem>
+                            <Logout />
+
+                        </ListItem>
                     </List>
                 </Drawer>
             </div>
 
             <Outlet />
+
+
 
         </div>
     )

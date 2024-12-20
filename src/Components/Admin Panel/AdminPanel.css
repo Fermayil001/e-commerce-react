@@ -2,3 +2,7 @@
     margin-top: 62px !important;
 }
 
+.MuiInputBase-root,
+.MuiAutocomplete-root {
+  box-sizing: content-box !important; /* Material-UI komponentləri üçün fərqli box-sizing */
+}
