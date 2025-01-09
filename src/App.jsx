@@ -181,11 +181,8 @@ function App() {
     dispatch(getAllProducts())
 
 
-    console.log(product); // Verilerin doğru gelip gelmediğini kontrol edin
-    // const productss = useSelector((state)=> state.allProducts)
-
-
-    // console.log(productss);
+    console.log(product); 
+    
 
     let data = [];
     products?.map((product, index) => (
