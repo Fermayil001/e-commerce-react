@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllProducts } from '../../redux/Api data/ProductsSlice';
 
 function ProductsComponent() {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Carousel from './Home page/Carousel';
 import Featured from './Home page/Featured';
 import Leatest from './Home page/Leatest';
@@ -10,8 +10,11 @@ import Subscribe from './Home page/Subscribe';
 import Row from './Home page/Row';
 import Footer from './Home page/Footer';
 
+
+
 const Home = ({ products, data }) => {
 
+    
 
 
     return (
@@ -26,6 +29,8 @@ const Home = ({ products, data }) => {
             <Subscribe />
             <Row />
             <Footer />
+
+
         </>
     )
 }

@@ -7,9 +7,8 @@ import Logout from '../Logout pg/Logout';
 
 const AdminLayout = () => {
 
-
-
-
+    
+    
     return (
         <div >
             {<div style={{ flexGrow: 1, textAlign: 'center' }}>

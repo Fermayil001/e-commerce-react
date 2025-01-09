@@ -1,5 +1,5 @@
 import React from "react";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,7 +22,8 @@ import Dashboard from "./Components/Admin Panel/Dashboard";
 import ProductManagement from "./Components/Admin Panel/ProductManagement";
 import OrderManagement from "./Components/Admin Panel/OrderManagement";
 import Logout from "./Components/Logout pg/Logout";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllProducts } from "./redux/Api-data/getAllProducts";
 function App() {
     const products = [
         {
@@ -170,8 +171,24 @@ function App() {
         },
     ]
 
+    const token = localStorage.getItem('token');
+
+
+
+    const { product } = useSelector(state => state.allProducts);
+
+    const dispatch = useDispatch()
+    dispatch(getAllProducts())
+
+
+    console.log(product); // Verilerin doğru gelip gelmediğini kontrol edin
+    // const productss = useSelector((state)=> state.allProducts)
+
+
+    // console.log(productss);
+
     let data = [];
-    products.map((product, index) => (
+    products?.map((product, index) => (
         data.push(product)
     ))
 
@@ -195,12 +212,12 @@ function App() {
                 <Route path="/" element={<Home products={products} data={data} />} />
                 <Route path="/products" element={<ProductsPg />} />
                 <Route path="/shop" element={<ShopPg products={products} />} />
-                <Route path="/login" element={isSuccessLogin ? <Logout/> : <Login setIsSuccessLogin ={setIsSuccessLogin}/>} />
+                <Route path="/login" element={isSuccessLogin ? <Logout /> : <Login setIsSuccessLogin={setIsSuccessLogin} />} />
                 <Route path="/*" element={<NotFound />} />
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/admin/*" element={<AdminLayout />}>
                     <Route index path="dashboard" element={<Dashboard />} />
-                    <Route path="productsmanagement" element={<ProductManagement/>} />
+                    <Route path="productsmanagement" element={<ProductManagement />} />
                     <Route path="ordermanagement" element={<OrderManagement />} />
                 </Route>
             </Routes>

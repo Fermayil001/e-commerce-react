@@ -16,9 +16,9 @@ const SignUp = () => {
 
     // Function that performs registration
     const registerUser = async (data) => {
+        debugger
         try {
             const response = await axios.post(Url, data);
-            debugger
             if (response.status === 201) {
                 setIsSuccess(true); // Başarı
                 setIsRegistered(false);
@@ -50,9 +50,9 @@ const SignUp = () => {
         // Kullanıcıyı kaydetme
         registerUser(data);
         // Başarılı kayıt işlemin sonunda formu temizle
-        setUsername('');
+       /*  setUsername('');
         setEmail('');
-        setPassword('');
+        setPassword(''); */
 
     };
 
